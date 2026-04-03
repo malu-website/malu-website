@@ -1,10 +1,5 @@
 import logo from './logo.png'
-const cardStyle = {
-  padding: "20px",
-  border: "1px solid #ddd",
-  borderRadius: "16px",
-  background: "#f9f7f3"
-}
+
 const benefits = [
   {
     title: 'Hochwertiger Auftritt für Events',
