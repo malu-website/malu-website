@@ -44,8 +44,8 @@ const targetGroups = [
 export default function App() {
   return (
     <div className="site-shell">
-      <header className="site-header">
-        <div className="container header-inner">
+      <div className="header-left">
+  <img src={logo} alt="MALU Logo" className="logo" />
        <div>
   <img src={logo} alt="MALU Logo" className="logo" />
 </div>
