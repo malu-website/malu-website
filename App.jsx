@@ -45,10 +45,9 @@ export default function App() {
     <div className="site-shell">
       <header className="site-header">
         <div className="container header-inner">
-          <div>
-            <div className="brand">MALU</div>
-            <div className="brand-subtitle">Mobiles Kaffeekonzept</div>
-          </div>
+       <div>
+  <img src="/MALU_Logo_braun.png" alt="MALU Logo" className="logo" />
+</div>
           <nav className="nav">
             <a href="#start">Start</a>
             <a href="#warum-malu">Warum MALU?</a>
