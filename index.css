@@ -68,7 +68,15 @@ img {
   gap: 1rem;
   padding: 1rem 0;
 }
+.header-left {
+  display: flex;
+  align-items: center;
+}
 
+.logo {
+  height: 36px;
+  width: auto;
+}
 .brand {
   font-size: 1.25rem;
   font-weight: 700;
@@ -358,8 +366,4 @@ img {
     border-radius: 1.5rem;
     padding: 1.25rem;
   }
-.logo {
-  height: 34px;
-  width: auto;
-  display: block;
-}
+
