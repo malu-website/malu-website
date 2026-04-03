@@ -34,12 +34,53 @@ export default function App() {
 
       <main>
 
-        <section id="start" className="hero-section">
-          <div className="container">
-            <h1>Mobile Kaffeekultur für Events</h1>
-            <p>MALU bringt hochwertigen Kaffee und moderne Getränke auf euer Event.</p>
-          </div>
-        </section>
+     <section id="start" className="hero-section">
+  <div className="container">
+    
+    <p style={{ letterSpacing: "0.15em", textTransform: "uppercase", color: "#7a7369" }}>
+      Für Events, Märkte & Festivals
+    </p>
+
+    <h1 style={{ fontSize: "48px", margin: "20px 0" }}>
+      Mobile Kaffeekultur für Events, die in Erinnerung bleiben.
+    </h1>
+
+    <p style={{ maxWidth: "600px", lineHeight: "1.6" }}>
+      MALU steht für Qualität, Leichtigkeit und eine moderne Kaffeekultur.
+      Wir bringen hochwertigen Kaffee, Matcha und frische Getränke dorthin,
+      wo Menschen zusammenkommen.
+    </p>
+
+    <div style={{ marginTop: "30px" }}>
+      <a 
+        href="mailto:info@malu2go.de"
+        style={{
+          padding: "12px 20px",
+          background: "#1f1d1a",
+          color: "white",
+          borderRadius: "10px",
+          marginRight: "10px",
+          textDecoration: "none"
+        }}
+      >
+        Event anfragen
+      </a>
+
+      <a 
+        href="#ueber-uns"
+        style={{
+          padding: "12px 20px",
+          border: "1px solid #ddd",
+          borderRadius: "10px",
+          textDecoration: "none"
+        }}
+      >
+        Mehr über uns
+      </a>
+    </div>
+
+  </div>
+</section>
 
       </main>
 
