@@ -65,76 +65,115 @@ export default function App() {
 
         {/* HERO */}
         <section id="start" className="hero-section">
-          <div className="container">
-            <p>Für Events, Märkte & Festivals</p>
-            <h1>Mobile Kaffeekultur für Events, die in Erinnerung bleiben.</h1>
-            <p>
-              MALU steht für Qualität, Leichtigkeit und moderne Kaffeekultur.
-              Wir bringen hochwertigen Kaffee, Matcha und Getränke dorthin,
-              wo Menschen zusammenkommen.
-            </p>
+          <div className="container hero-grid">
+
+            <div className="hero-copy">
+              <p className="section-label">Für Events, Märkte & Festivals</p>
+
+              <h1>
+                Mobile Kaffeekultur für Events, die in Erinnerung bleiben.
+              </h1>
+
+              <p>
+                MALU steht für Qualität, Leichtigkeit und eine moderne Kaffeekultur.
+                Wir bringen hochwertigen Kaffee, Matcha und Getränke dorthin,
+                wo Menschen zusammenkommen.
+              </p>
+            </div>
+
+            <div className="hero-cards">
+
+              <div className="card card-span-2">
+                <p className="section-label">Unser Konzept</p>
+                <p>
+                  Wenige, hochwertige Produkte. Klare Abläufe.
+                  Ein moderner, ruhiger Markenauftritt.
+                </p>
+              </div>
+
+              <div className="card">
+                <p className="section-label">Sortiment</p>
+                <ul className="tag-list">
+                  {offerings.map((o) => <li key={o}>{o}</li>)}
+                </ul>
+              </div>
+
+              <div className="card">
+                <p className="section-label">Mobil</p>
+                <p>Flexibel einsetzbar auf Events, Märkten und Festivals.</p>
+              </div>
+
+            </div>
+
           </div>
         </section>
 
         {/* WARUM MALU */}
-        <section id="warum-malu" className="section">
+        <section id="warum-malu" className="section section-white">
           <div className="container">
-            <h2>Warum MALU?</h2>
-            <div>
+
+            <p className="section-label">Warum MALU?</p>
+
+            <h2>
+              Mehr als Kaffee – ein Erlebnis für eure Gäste.
+            </h2>
+
+            <div className="grid grid-4">
               {benefits.map((b) => (
-                <div key={b.title}>
+                <div className="card" key={b.title}>
                   <h3>{b.title}</h3>
                   <p>{b.text}</p>
                 </div>
               ))}
             </div>
+
           </div>
         </section>
 
-        {/* KONZEPT */}
+        {/* WERTE + ZIELGRUPPE */}
         <section className="section">
-          <div className="container">
-            <h2>Unser Konzept</h2>
-            <ul>
-              {offerings.map((o) => (
-                <li key={o}>{o}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
+          <div className="container two-column-layout">
 
-        {/* WERTE */}
-        <section className="section">
-          <div className="container">
-            <h2>Unsere Werte</h2>
-            <ul>
-              {values.map((v) => (
-                <li key={v}>{v}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
+            <div className="card dark-card">
+              <p className="section-label">Markenwerte</p>
+              <h2>Wofür MALU steht</h2>
+              <div className="grid grid-2">
+                {values.map((v) => <div key={v}>{v}</div>)}
+              </div>
+            </div>
 
-        {/* ZIELGRUPPE */}
-        <section className="section">
-          <div className="container">
-            <h2>Unsere Zielgruppe</h2>
-            <ul>
-              {targetGroups.map((t) => (
-                <li key={t}>{t}</li>
-              ))}
-            </ul>
+            <div className="card">
+              <p className="section-label">Zielgruppe</p>
+              <h2>Unsere Gäste</h2>
+              <ul className="tag-list">
+                {targetGroups.map((t) => <li key={t}>{t}</li>)}
+              </ul>
+            </div>
+
           </div>
         </section>
 
         {/* ÜBER UNS */}
-        <section id="ueber-uns" className="section">
-          <div className="container">
-            <h2>Über uns</h2>
-            <p>
-              Wir sind Marie und Laurids – ein junges Ehepaar aus Essen und die Gründer von MALU.
-              Unser Ziel ist es, Menschen kleine Genussmomente im Alltag zu schenken.
-            </p>
+        <section id="ueber-uns" className="section section-alt">
+          <div className="container two-column-layout">
+
+            <div>
+              <p className="section-label">Über uns</p>
+              <h2>Marie & Laurids</h2>
+              <p>
+                MALU ist unser Herzensprojekt. Wir möchten Menschen kleine
+                Genussmomente im Alltag schenken.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3>Unsere Motivation</h3>
+              <p>
+                Wir glauben daran, dass es wichtig ist, Orte zu schaffen,
+                an denen man kurz durchatmen kann.
+              </p>
+            </div>
+
           </div>
         </section>
 
