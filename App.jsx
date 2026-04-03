@@ -46,7 +46,7 @@ export default function App() {
       <header className="site-header">
         <div className="container header-inner">
        <div>
-  <img src="/MALU_Logo_braun.png" alt="MALU Logo" className="logo" />
+  <img src="/logo.png" alt="MALU Logo" className="logo" />
 </div>
           <nav className="nav">
             <a href="#start">Start</a>
