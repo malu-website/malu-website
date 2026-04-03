@@ -53,6 +53,7 @@ img {
 
 .site-header {
   position: static;
+}
   top: 0;
   z-index: 20;
   background: rgba(247, 244, 239, 0.92);
@@ -358,7 +359,7 @@ img {
     padding: 1.25rem;
   }
 .logo {
-  height: 42px;
+  height: 34px;
   width: auto;
   display: block;
 }
