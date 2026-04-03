@@ -1,193 +1,376 @@
-import logo from './logo.png'
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1e1d1b;
+  background: #f7f4ef;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --bg: #f7f4ef;
+  --bg-soft: #f1ede6;
+  --text: #1f1d1a;
+  --muted: #666055;
+  --line: #dfd7cb;
+  --white: #ffffff;
+  --dark: #1f1d1a;
+}
 
-const benefits = [
-  {
-    title: 'Hochwertiger Auftritt für Events',
-    text: 'MALU fügt sich mit klarem, modernem Look nahtlos in hochwertige Veranstaltungen ein.',
-  },
-  {
-    title: 'Zuverlässig & professionell',
-    text: 'Klare Abläufe sorgen für kurze Wartezeiten und einen reibungslosen Ablauf.',
-  },
-  {
-    title: 'Mehr als ein Foodtruck',
-    text: 'Ein bewusst gestaltetes Getränkekonzept, das Menschen zusammenbringt.',
-  },
-  {
-    title: 'Social-Media-Potenzial',
-    text: 'Unser Branding lädt zum Teilen ein und erhöht die Sichtbarkeit eures Events.',
-  },
-]
+* {
+  box-sizing: border-box;
+}
 
-const values = [
-  'Qualität statt Masse',
-  'Reduktion & Klarheit',
-  'Zeitgemäße Ästhetik',
-  'Nähe zur Community',
-  'Verlässlichkeit & Professionalität',
-]
+html {
+  scroll-behavior: smooth;
+}
 
-const offerings = [
-  'Hochwertiger Kaffee',
-  'Matcha',
-  'Moderne Getränkevariationen',
-  'Frische Säfte',
-]
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--text);
+}
 
-const targetGroups = [
-  'Bewusster, offener Lebensstil',
-  'Interesse an Qualität und Ästhetik',
-  'Urbanität und Neugier',
-  'Wertschätzung für kleine Genussmomente',
-  'Wunsch nach Orten, die einladen statt bewerten',
-]
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-export default function App() {
-  return (
-    <div className="site-shell">
+img {
+  max-width: 100%;
+  display: block;
+}
 
-      {/* HEADER */}
-      <header className="site-header">
-        <div className="container header-inner">
-          <div className="header-left">
-            <img src={logo} alt="MALU Logo" className="logo" />
-          </div>
-          <nav className="nav">
-            <a href="#start">Start</a>
-            <a href="#warum-malu">Warum MALU?</a>
-            <a href="#ueber-uns">Über uns</a>
-            <a href="#kontakt">Kontakt</a>
-          </nav>
-        </div>
-      </header>
+.site-shell {
+  min-height: 100vh;
+}
 
-      <main>
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
 
-        {/* HERO */}
-        <section id="start" className="hero-section">
-          <div className="container hero-grid">
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(247, 244, 239, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(223, 215, 203, 0.8);
+}
 
-            <div className="hero-copy">
-              <p className="section-label">Für Events, Märkte & Festivals</p>
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
 
-              <h1>
-                Mobile Kaffeekultur für Events, die in Erinnerung bleiben.
-              </h1>
+.header-brand {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
 
-              <p>
-                MALU steht für Qualität, Leichtigkeit und eine moderne Kaffeekultur.
-                Wir bringen hochwertigen Kaffee, Matcha und Getränke dorthin,
-                wo Menschen zusammenkommen.
-              </p>
-            </div>
+.logo {
+  height: 42px;
+  width: auto;
+  display: block;
+}
 
-            <div className="hero-cards">
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+}
 
-              <div className="card card-span-2">
-                <p className="section-label">Unser Konzept</p>
-                <p>
-                  Wenige, hochwertige Produkte. Klare Abläufe.
-                  Ein moderner, ruhiger Markenauftritt.
-                </p>
-              </div>
+.brand-subtitle,
+.section-label,
+.section-label-dark {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #7a7369;
+}
 
-              <div className="card">
-                <p className="section-label">Sortiment</p>
-                <ul className="tag-list">
-                  {offerings.map((o) => <li key={o}>{o}</li>)}
-                </ul>
-              </div>
+.section-label-dark {
+  color: rgba(255,255,255,0.7);
+}
 
-              <div className="card">
-                <p className="section-label">Mobil</p>
-                <p>Flexibel einsetzbar auf Events, Märkten und Festivals.</p>
-              </div>
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
 
-            </div>
+.nav a {
+  color: #4e493f;
+}
 
-          </div>
-        </section>
+.nav a:hover,
+.contact-list a:hover {
+  text-decoration: underline;
+}
 
-        {/* WARUM MALU */}
-        <section id="warum-malu" className="section section-white">
-          <div className="container">
+.hero-section,
+.section {
+  padding: 5rem 0;
+}
 
-            <p className="section-label">Warum MALU?</p>
+.section-white {
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
 
-            <h2>
-              Mehr als Kaffee – ein Erlebnis für eure Gäste.
-            </h2>
+.section-alt {
+  background: var(--bg-soft);
+}
 
-            <div className="grid grid-4">
-              {benefits.map((b) => (
-                <div className="card" key={b.title}>
-                  <h3>{b.title}</h3>
-                  <p>{b.text}</p>
-                </div>
-              ))}
-            </div>
+.hero-grid,
+.two-column-layout,
+.footer-grid,
+.callout-card {
+  display: grid;
+  gap: 2rem;
+}
 
-          </div>
-        </section>
+.hero-grid,
+.two-column-layout {
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: start;
+}
 
-        {/* WERTE + ZIELGRUPPE */}
-        <section className="section">
-          <div className="container two-column-layout">
+.hero-copy h1,
+.section h2 {
+  margin: 0.75rem 0 0;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
 
-            <div className="card dark-card">
-              <p className="section-label">Markenwerte</p>
-              <h2>Wofür MALU steht</h2>
-              <div className="grid grid-2">
-                {values.map((v) => <div key={v}>{v}</div>)}
-              </div>
-            </div>
+.hero-copy h1 {
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  max-width: 13ch;
+}
 
-            <div className="card">
-              <p className="section-label">Zielgruppe</p>
-              <h2>Unsere Gäste</h2>
-              <ul className="tag-list">
-                {targetGroups.map((t) => <li key={t}>{t}</li>)}
-              </ul>
-            </div>
+.section h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
 
-          </div>
-        </section>
+.hero-copy p,
+.section p,
+.card p,
+.footer-copy,
+.contact-list p {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
 
-        {/* ÜBER UNS */}
-        <section id="ueber-uns" className="section section-alt">
-          <div className="container two-column-layout">
+.lead,
+.lead-text {
+  font-size: 1.1rem;
+}
 
-            <div>
-              <p className="section-label">Über uns</p>
-              <h2>Marie & Laurids</h2>
-              <p>
-                MALU ist unser Herzensprojekt. Wir möchten Menschen kleine
-                Genussmomente im Alltag schenken.
-              </p>
-            </div>
+.max-width-text {
+  max-width: 52rem;
+}
 
-            <div className="card">
-              <h3>Unsere Motivation</h3>
-              <p>
-                Wir glauben daran, dass es wichtig ist, Orte zu schaffen,
-                an denen man kurz durchatmen kann.
-              </p>
-            </div>
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
-          </div>
-        </section>
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
 
-        {/* KONTAKT */}
-        <section id="kontakt" className="section">
-          <div className="container">
-            <h2>Kontakt</h2>
-            <p>info@malu2go.de</p>
-            <p>017664701484</p>
-          </div>
-        </section>
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.35rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
 
-      </main>
+.button:hover {
+  transform: translateY(-1px);
+}
 
-    </div>
-  )
+.button-primary {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.button-secondary {
+  background: transparent;
+  border: 1px solid var(--line);
+}
+
+.button-secondary:hover {
+  background: rgba(31, 29, 26, 0.04);
+}
+
+.hero-cards,
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 3rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px rgba(41, 35, 28, 0.04);
+}
+
+.card-span-2 {
+  grid-column: span 2;
+}
+
+.card-highlight p:last-child {
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.soft-card {
+  background: #faf8f5;
+}
+
+.dark-card {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.dark-card p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.compact-grid {
+  margin-top: 2rem;
+}
+
+.value-box,
+.tag-list li,
+.inner-box {
+  border-radius: 1.25rem;
+}
+
+.value-box {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+}
+
+.tag-list,
+.target-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.tag-list li {
+  background: #f6f2ec;
+  padding: 0.95rem 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.inner-box {
+  margin-top: 1.5rem;
+  background: #f6f2ec;
+  padding: 1.4rem;
+}
+
+.inner-box h4,
+.card h3,
+.card h4 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.callout-card {
+  grid-template-columns: 1fr auto;
+  align-items: end;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 3rem 0;
+}
+
+.footer-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.contact-list p,
+.footer-copy {
+  margin: 0.25rem 0;
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .two-column-layout,
+  .footer-grid,
+  .callout-card,
+  .grid-4,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav {
+    display: none;
+  }
+
+  .hero-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card-span-2 {
+    grid-column: span 1;
+  }
+
+  .hero-section,
+  .section {
+    padding: 4rem 0;
+  }
+
+  .container {
+    width: min(1120px, calc(100% - 1.25rem));
+  }
+
+  .card {
+    border-radius: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .logo {
+    height: 36px;
+  }
 }
