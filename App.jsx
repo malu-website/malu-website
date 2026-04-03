@@ -1,11 +1,46 @@
 import logo from './logo.png'
 
-const cardStyle = {
-  padding: "20px",
-  border: "1px solid #ddd",
-  borderRadius: "16px",
-  background: "#f9f7f3"
-}
+const benefits = [
+  {
+    title: 'Hochwertiger Auftritt für Events',
+    text: 'MALU fügt sich mit klarem, modernem Look nahtlos in hochwertige Veranstaltungen ein.',
+  },
+  {
+    title: 'Zuverlässig & professionell',
+    text: 'Klare Abläufe sorgen für kurze Wartezeiten und einen reibungslosen Ablauf.',
+  },
+  {
+    title: 'Mehr als ein Foodtruck',
+    text: 'Ein bewusst gestaltetes Getränkekonzept, das Menschen zusammenbringt.',
+  },
+  {
+    title: 'Social-Media-Potenzial',
+    text: 'Unser Branding lädt zum Teilen ein und erhöht die Sichtbarkeit eures Events.',
+  },
+]
+
+const values = [
+  'Qualität statt Masse',
+  'Reduktion & Klarheit',
+  'Zeitgemäße Ästhetik',
+  'Nähe zur Community',
+  'Verlässlichkeit & Professionalität',
+]
+
+const offerings = [
+  'Hochwertiger Kaffee',
+  'Matcha',
+  'Moderne Getränkevariationen',
+  'Frische Säfte',
+]
+
+const targetGroups = [
+  'Bewusster, offener Lebensstil',
+  'Interesse an Qualität und Ästhetik',
+  'Urbanität und Neugier',
+  'Wertschätzung für kleine Genussmomente',
+  'Wunsch nach Orten, die einladen statt bewerten',
+]
 
 export default function App() {
   return (
@@ -31,46 +66,69 @@ export default function App() {
         {/* HERO */}
         <section id="start" className="hero-section">
           <div className="container">
-            <p style={{ letterSpacing: "0.15em", textTransform: "uppercase", color: "#7a7369" }}>
-              Für Events, Märkte & Festivals
-            </p>
-
-            <h1 style={{ fontSize: "48px", margin: "20px 0" }}>
-              Mobile Kaffeekultur für Events, die in Erinnerung bleiben.
-            </h1>
-
-            <p style={{ maxWidth: "600px", lineHeight: "1.6" }}>
-              MALU steht für Qualität, Leichtigkeit und eine moderne Kaffeekultur.
-              Wir bringen hochwertigen Kaffee, Matcha und frische Getränke dorthin,
+            <p>Für Events, Märkte & Festivals</p>
+            <h1>Mobile Kaffeekultur für Events, die in Erinnerung bleiben.</h1>
+            <p>
+              MALU steht für Qualität, Leichtigkeit und moderne Kaffeekultur.
+              Wir bringen hochwertigen Kaffee, Matcha und Getränke dorthin,
               wo Menschen zusammenkommen.
             </p>
           </div>
         </section>
 
         {/* WARUM MALU */}
-        <section id="warum-malu" style={{ background: "#ffffff", padding: "80px 0" }}>
+        <section id="warum-malu" className="section">
           <div className="container">
-
-            <p style={{ letterSpacing: "0.15em", textTransform: "uppercase", color: "#7a7369" }}>
-              Warum MALU?
-            </p>
-
-            <h2 style={{ fontSize: "36px", margin: "20px 0" }}>
-              Mehr als Kaffee – ein Erlebnis für eure Gäste.
-            </h2>
-
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
-              <div style={cardStyle}><h3>Hochwertiger Auftritt</h3></div>
-              <div style={cardStyle}><h3>Zuverlässig & schnell</h3></div>
-              <div style={cardStyle}><h3>Mehr als ein Foodtruck</h3></div>
-              <div style={cardStyle}><h3>Social Media Effekt</h3></div>
+            <h2>Warum MALU?</h2>
+            <div>
+              {benefits.map((b) => (
+                <div key={b.title}>
+                  <h3>{b.title}</h3>
+                  <p>{b.text}</p>
+                </div>
+              ))}
             </div>
+          </div>
+        </section>
 
+        {/* KONZEPT */}
+        <section className="section">
+          <div className="container">
+            <h2>Unser Konzept</h2>
+            <ul>
+              {offerings.map((o) => (
+                <li key={o}>{o}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* WERTE */}
+        <section className="section">
+          <div className="container">
+            <h2>Unsere Werte</h2>
+            <ul>
+              {values.map((v) => (
+                <li key={v}>{v}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* ZIELGRUPPE */}
+        <section className="section">
+          <div className="container">
+            <h2>Unsere Zielgruppe</h2>
+            <ul>
+              {targetGroups.map((t) => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
           </div>
         </section>
 
         {/* ÜBER UNS */}
-        <section id="ueber-uns" style={{ padding: "80px 0" }}>
+        <section id="ueber-uns" className="section">
           <div className="container">
             <h2>Über uns</h2>
             <p>
@@ -81,10 +139,11 @@ export default function App() {
         </section>
 
         {/* KONTAKT */}
-        <section id="kontakt" style={{ padding: "80px 0", background: "#f1ede6" }}>
+        <section id="kontakt" className="section">
           <div className="container">
             <h2>Kontakt</h2>
             <p>info@malu2go.de</p>
+            <p>017664701484</p>
           </div>
         </section>
 
