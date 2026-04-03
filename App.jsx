@@ -80,6 +80,48 @@ export default function App() {
     </div>
 
   </div>
+<section id="warum-malu" style={{ background: "#ffffff", padding: "80px 0" }}>
+  <div className="container">
+
+    <p style={{ letterSpacing: "0.15em", textTransform: "uppercase", color: "#7a7369" }}>
+      Warum MALU?
+    </p>
+
+    <h2 style={{ fontSize: "36px", margin: "20px 0" }}>
+      Mehr als Kaffee – ein Erlebnis für eure Gäste.
+    </h2>
+
+    <p style={{ maxWidth: "700px", lineHeight: "1.6", marginBottom: "40px" }}>
+      MALU bringt nicht einfach Getränke mit – wir bringen Atmosphäre.
+      Unser Auftritt ist modern, ruhig und hochwertig. Dadurch entstehen
+      kleine Genussmomente, die Gästen im Kopf bleiben und Events sichtbar aufwerten.
+    </p>
+
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+
+      <div style={cardStyle}>
+        <h3>Hochwertiger Auftritt</h3>
+        <p>Modernes, reduziertes Design, das sich perfekt in Events einfügt.</p>
+      </div>
+
+      <div style={cardStyle}>
+        <h3>Zuverlässig & schnell</h3>
+        <p>Klare Abläufe sorgen für kurze Wartezeiten und reibungslose Prozesse.</p>
+      </div>
+
+      <div style={cardStyle}>
+        <h3>Mehr als ein Foodtruck</h3>
+        <p>Ein bewusst gestaltetes Getränkekonzept, das Menschen zusammenbringt.</p>
+      </div>
+
+      <div style={cardStyle}>
+        <h3>Social Media Effekt</h3>
+        <p>Unsere Ästhetik lädt zum Fotografieren, Teilen und Markieren ein.</p>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
       </main>
