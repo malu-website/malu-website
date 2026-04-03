@@ -1,4 +1,5 @@
-const benefits = [
+import logo from './logo.png'
+  const benefits = [
   {
     title: 'Hochwertiger Auftritt für Events',
     text: 'MALU fügt sich mit klarem, modernem Look nahtlos in hochwertige Veranstaltungen, Märkte, Messen und Festivals ein.',
@@ -46,7 +47,7 @@ export default function App() {
       <header className="site-header">
         <div className="container header-inner">
        <div>
-  <img src="/logo.png" alt="MALU Logo" className="logo" />
+  <img src={logo} alt="MALU Logo" className="logo" />
 </div>
           <nav className="nav">
             <a href="#start">Start</a>
