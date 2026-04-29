@@ -30,8 +30,7 @@ const values = [
 const offerings = [
   'Hochwertiger Kaffee',
   'Matcha',
-  'Moderne Getränkevariationen',
-  'Frische Säfte',
+  'Moderne Getränkevariationen'
 ]
 
 const targetGroups = [
