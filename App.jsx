@@ -72,7 +72,7 @@ export default function App() {
               </span>
 
               <h1>
-                Mobiles Kaffee- & Getränkekonzept für Events, die im Kopf bleiben.
+                Mobile Kaffeekultur für Events, die in Erinnerung bleiben.
               </h1>
 
               <p className="lead">
