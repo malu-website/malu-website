@@ -16,7 +16,7 @@
   --line: #D6C8BA;
   --white: #FAF7F2;
   --dark: #3B2A23;
-  --soft-card: #F8F3EC;
+  --card-soft: #F8F3EC;
   --tag-bg: #EFE5D8;
 }
 
@@ -101,7 +101,7 @@ img {
 }
 
 .section-label-dark {
-  color: rgba(250, 247, 242, 0.74);
+  color: rgba(250, 247, 242, 0.72);
 }
 
 .nav {
@@ -191,8 +191,8 @@ img {
   border-radius: 999px;
   padding: 0.55rem 1rem;
   color: var(--muted);
-  font-size: 0.9rem;
   background: rgba(250, 247, 242, 0.55);
+  font-size: 0.9rem;
 }
 
 .button-group {
@@ -268,7 +268,7 @@ img {
 }
 
 .soft-card {
-  background: var(--soft-card);
+  background: var(--card-soft);
 }
 
 .dark-card {
@@ -276,7 +276,9 @@ img {
   color: var(--white);
 }
 
-.dark-card h2 {
+.dark-card h2,
+.dark-card h3,
+.dark-card h4 {
   color: var(--white);
 }
 
