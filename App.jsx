@@ -3,7 +3,7 @@ import hero from './hero.JPG'
 
 const benefits = [
   {
-    title: 'Ein Auftritt, der euer Event sichtbar aufwertet',
+    title: 'Hochwertiger Auftritt, der euer Event sichtbar aufwertet',
     text: 'Unser reduziertes, modernes Design fügt sich nahtlos in hochwertige Formate ein und wirkt bewusst ruhiger und klarer als klassische Foodtrucks.',
   },
   {
@@ -31,7 +31,8 @@ const values = [
 const offerings = [
   'Hochwertiger Kaffee',
   'Matcha',
-  'Moderne Getränkevariationen'
+  'Moderne Getränkevariationen',
+  'Frische Säfte',
 ]
 
 const targetGroups = [
@@ -62,7 +63,6 @@ export default function App() {
 
       <main>
 
-        {/* HERO (UPGRADED) */}
         <section id="start" className="hero-section">
           <div className="container hero-grid">
             <div className="hero-copy">
@@ -72,7 +72,7 @@ export default function App() {
               </span>
 
               <h1>
-                Mobile Kaffeekultur für Events, die in Erinnerung bleiben.
+                Mobiles Kaffee- & Getränkekonzept für Events, die im Kopf bleiben.
               </h1>
 
               <p className="lead">
@@ -103,13 +103,13 @@ export default function App() {
             </div>
 
             <div className="hero-cards">
-              <article className="card card-highlight card-span-2">
-                <p className="section-label">Unser Konzept</p>
-                <p>
-                  Wenige, bewusst ausgewählte Produkte. Klare Prozesse. Ruhige, moderne
-                  Ästhetik. So schaffen wir Genussmomente mit Substanz – offen, herzlich und
-                  professionell.
-                </p>
+
+              <article className="card card-span-2 image-card">
+                <img
+                  src={hero}
+                  alt="MALU mobiles Kaffee Konzept"
+                  className="hero-image"
+                />
               </article>
 
               <article className="card">
@@ -124,15 +124,15 @@ export default function App() {
               <article className="card">
                 <p className="section-label">Mobil einsetzbar</p>
                 <p>
-                  Flexibel auf Wochenmärkten, an Universitäten, bei Firmenevents, Messen,
-                  Festivals und weiteren Formaten.
+                  Flexibel auf Wochenmärkten, an Universitäten, bei Firmenevents,
+                  Messen, Festivals und weiteren Formaten.
                 </p>
               </article>
+
             </div>
           </div>
         </section>
 
-        {/* WARUM MALU */}
         <section id="warum-malu" className="section section-white">
           <div className="container">
             <div className="section-intro max-width-text">
@@ -159,7 +159,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* WERTE + ZIELGRUPPE */}
         <section className="section">
           <div className="container two-column-layout">
 
@@ -190,7 +189,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* ÜBER UNS */}
         <section id="ueber-uns" className="section section-alt">
           <div className="container two-column-layout">
 
@@ -230,7 +228,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* CTA */}
         <section className="section">
           <div className="container">
             <article className="card callout-card">
