@@ -1,9 +1,8 @@
 import logo from './logo.png'
-import hero from './hero.JPG'
 
 const benefits = [
   {
-    title: 'Hochwertiger Auftritt, der euer Event sichtbar aufwertet',
+    title: 'Ein Auftritt, der euer Event sichtbar aufwertet',
     text: 'Unser reduziertes, modernes Design fügt sich nahtlos in hochwertige Formate ein und wirkt bewusst ruhiger und klarer als klassische Foodtrucks.',
   },
   {
