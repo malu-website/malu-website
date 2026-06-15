@@ -106,7 +106,7 @@ export default function App() {
 
               <article className="card card-span-2 image-card">
                 <img
-                  src={hero}
+                  src="/hero.JPG"
                   alt="MALU mobiles Kaffee Konzept"
                   className="hero-image"
                 />
